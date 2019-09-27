@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://max123:max123@devconnector-k78cz.mongodb.net/Bumblebee?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
+}

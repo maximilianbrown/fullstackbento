@@ -1,0 +1,36 @@
+{
+  "name": "fullstack_bento",
+  "version": "1.0.0",
+  "description": "fullstack bento webapp",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index",
+    "start": "node index",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximilianbrown/fullstackbento.git"
+  },
+  "author": "max brown",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maximilianbrown/fullstackbento/issues"
+  },
+  "homepage": "https://github.com/maximilianbrown/fullstackbento#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.11",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.1"
+  }
+}

@@ -1,0 +1,161 @@
+:root{
+  --prm: orange;
+  --scn: yellow;
+  --dark: rgb(27, 27, 27);
+  --lght: #f4f4f4;
+}
+
+
+.bg-yelo{
+  background-color: rgb(231, 216, 80);
+}
+
+.bg-dark{
+  background-color: rgb(27, 27, 27);
+}
+
+ul {
+  list-style: none
+}
+
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+
+
+/* Utilities */
+.container {
+  margin:auto;
+  padding:0 2rem;
+}
+
+
+
+.navbar{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0.7rem 2rem;
+  color: yellow;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar ul{
+  display:flex;
+}
+.navbar li{
+  margin:0 20px;
+}
+
+
+.overlay{
+  background-color:rgba(160, 160, 160, 0.514);
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  animation-name: fadein;
+  animation-duration: 0.25s;
+  transition: opacity 0.25s;
+  opacity:1;
+}
+
+
+
+/* LANDING */
+
+.banner {
+  background: url('./img/IMG_043.jpg') center;
+  height: 40vh;
+}
+
+.auth {
+  position: fixed; 
+  top: 100px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.205);
+  padding: 10px;
+  box-shadow: 0px 0px 10px;
+  animation-name: authmenu;
+  animation-duration: 0.25s;
+  transition: opacity 0.25s, top 0.25s;
+  opacity:1;
+}
+
+.auth .buttons{
+  display:flex;
+}
+
+.auth input{
+  width:100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid grey;
+}
+
+.auth input:focus{
+  border: 1px solid var(--prm)
+}
+
+.log-btn{
+  background-color: white;
+  padding: 10px 0px;
+  border: none;
+  font-size: 16px;
+  margin: 8px 10px 8px 0px;
+  border-radius: 2px;
+  transition-duration: 0.4s;
+  flex-grow:8;
+  border: 1px solid grey;
+}
+
+.log-btn:hover{
+  background-color:var(--prm);
+  flex-grow:9;
+}
+
+.reg-btn{
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 0px;
+  border: none;
+  font-size: 14px;
+  margin: 8px 0px 8px 5px;
+  border-radius: 2px;
+  transition-duration: 0.4s;
+  flex-grow:2;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.reg-btn:hover{
+  background-color:var(--prm);
+  flex-grow:9;
+}
+
+
+/* ANIMATIONS & TRANSITIONS */
+
+.hide{
+  opacity:0;
+}
+
+.swipe-up{
+  top:-500px;
+}
+
+@keyframes authmenu {
+0%{opacity:0; transform: translateX(-50%) translateY(-400px); }
+100%{opacity:1; transform: translateX(-50%) translateY(0px);}
+}
+
+@keyframes fadein {
+  0%{opacity:0;}
+  100%{opacity:1;}
+  }
+
