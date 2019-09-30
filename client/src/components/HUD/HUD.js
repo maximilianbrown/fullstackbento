@@ -20,7 +20,7 @@ const HUD = () => {
 
     const toggleAuth = (e) => {
         toggletoggle(!toggling);
-    }
+    };
 
     useEffect(()=>{
         console.log("toggle effect running")

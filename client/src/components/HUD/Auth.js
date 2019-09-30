@@ -13,6 +13,8 @@ const Auth = (props) =>{
         console.log("change")
     }
 
+
+
     return (
                 <div id="authmenu" className="auth">
                     <button name="auth" disabled={props.toggling} onClick={e=>props.toggleAuth(e)}>x</button>
@@ -20,8 +22,8 @@ const Auth = (props) =>{
                         <input type="email" placeholder="Email Adress" value={email} name="email" onChange={e=>onChange(e)}/>
                         <input type="password" placeholder="Password" value={pass} name="pass" onChange={e=>onChange(e)}/>
                         <div className="buttons">
-                        <button className="log-btn">Login</button>
-                        <button className="reg-btn">Register</button>
+                        <button className="log-btn" onClick={()=>console.log("logbtn")}>Login</button>
+                        <button className="reg-btn"> Register</button>
                         </div>
                     </form>
                 </div>
