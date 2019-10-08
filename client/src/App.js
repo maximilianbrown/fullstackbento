@@ -6,9 +6,16 @@ import Blue from './components/layout/Blue';
 import HUD from './components/HUD/HUD';
 import Banner from './components/layout/Landing';
 
+
+import {Provider} from 'react-redux';
+import store from './store';
+
+
+
 const App = () =>{
 
   return (
+    <Provider store={store}>
     <Router>
     <Fragment>
       <HUD/>
@@ -24,6 +31,7 @@ const App = () =>{
 
     </Fragment>
     </Router>
+    </Provider>
   )
 
 }

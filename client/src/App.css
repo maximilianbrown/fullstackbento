@@ -32,7 +32,28 @@ ul {
   padding:0 2rem;
 }
 
+.alert-auth{
+  padding:5px 10px;
+  border-radius:2px;
+  margin: 5px 0;
+}
 
+.alert-danger {
+  border: solid rgb(255, 0, 0) 2px;
+  background-color:rgba(255, 0, 0, 0.75);
+}
+
+
+/* LANDING */
+
+.banner {
+  background: url('./img/IMG_043.jpg') center;
+  height: 40vh;
+}
+
+
+
+/* HEADS UP DISPLAY */
 
 .navbar{
   display:flex;
@@ -65,14 +86,16 @@ ul {
   opacity:1;
 }
 
-
-
-/* LANDING */
-
-.banner {
-  background: url('./img/IMG_043.jpg') center;
-  height: 40vh;
+.banner-alert{
+  background-color: yellow;
+  position:absolute;
+  top:50px;
+  width:100%;
 }
+
+
+
+/* AUTH MENU */
 
 .auth {
   position: fixed; 
@@ -86,6 +109,20 @@ ul {
   animation-duration: 0.25s;
   transition: opacity 0.25s, top 0.25s;
   opacity:1;
+}
+
+.auth-x-btn{
+  padding:2px 5px;
+  background:none;
+  border:none;
+  border-radius:2px;
+  color:var(--prm);
+  margin-right:0;
+  margin-left:auto;
+}
+
+.auth-x-btn:hover{
+  background:orange;
 }
 
 .auth .buttons{
@@ -137,6 +174,7 @@ ul {
   background-color:var(--prm);
   flex-grow:9;
 }
+
 
 
 /* ANIMATIONS & TRANSITIONS */

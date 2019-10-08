@@ -21,7 +21,7 @@ router.get('/', auth, async (req, res) => {
     }
 });
 
-// @route   POST api/user
+// @route   POST api/auth
 // @desc    login user
 // @access  Public
 router.post('/', [
@@ -31,7 +31,7 @@ router.post('/', [
     async (req, res) => {
     const errors = validationResult(req);
     if(!errors.isEmpty()){
-        return res.status(400).json({errors: errors.array()});
+       return res.status(400).json({errors: errors.array()});
     }
 
     //1) --- see if user exists? ----------

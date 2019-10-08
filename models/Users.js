@@ -17,9 +17,15 @@ const UserSchema = new mongoose.Schema({
         type:Date,
         default: Date.now
     },
-    access:{
-        type: String,
-        default:'user'       
+    authentication:{
+        verified:{
+            type: Boolean,
+            default: false
+        },
+        level:{
+            type: String,
+            default:'basic'       
+        }
     }
 });
 
