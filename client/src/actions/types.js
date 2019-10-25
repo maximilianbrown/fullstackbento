@@ -5,3 +5,8 @@ export const REMOVE_ALERT = 'REMOVE_ALERT';
 export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
 export const REGISTER_FAIL = 'REGISTER_FAIL';
 export const LOGOUT = 'LOGOUT';
+export const USER_LOADED = 'USER_LOADED';
+export const AUTH_ERROR = 'AUTH_ERROR';
+
+export const GET_INGREDIENTS = 'GET_INGREDIENTS';
+export const INGREDIENT_ERROR = 'INGREDIENT_ERROR';

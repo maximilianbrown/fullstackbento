@@ -18,9 +18,9 @@ const HUD = (props) => {
 
 
 
-    const toggleCart = (e) => {
+    // const toggleCart = (e) => {
 
-    };
+    // };
 
    const toggleAuth = (e) => {
         toggletoggle(!toggling);
@@ -48,17 +48,22 @@ const HUD = (props) => {
     return (
         <Fragment>
         {auth&&<div id="overlay" className="overlay"></div>}
+        <div className="HUD">
         <Navbar toggling={toggling} toggleAuth={()=>toggleAuth()}/>
-        <BannerAlert/>
+        {props.userstatus.user&&!props.userstatus.user.authentication.verified&&<BannerAlert/>}
+        </div>
 
         {auth&&<Auth toggling={toggling} toggleAuth={(e)=>toggleAuth(e)}/>}        
         </Fragment>
     )
 }
 
+HUD.propTypes={
+    userstatus: PropTypes.object.isRequired
+}
 
 const mapStateToProps = state =>({
-    isAuth: state.auth.isAuthenticated
+    userstatus: state.auth
 })
 
 export default connect(mapStateToProps)(HUD)
